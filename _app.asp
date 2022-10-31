@@ -132,6 +132,7 @@ Class Google_oAuth_Plugin
 	' Class First Init
 	'---------------------------------------------------------------
 
+
 	'---------------------------------------------------------------
 	' Class Terminate
 	'---------------------------------------------------------------
@@ -140,6 +141,30 @@ Class Google_oAuth_Plugin
 	End Sub
 	'---------------------------------------------------------------
 	' Class Terminate
+	'---------------------------------------------------------------
+
+
+	'---------------------------------------------------------------
+	' Plugin Defines
+	'---------------------------------------------------------------
+	Public Property Get PluginCode() 		: PluginCode = PLUGIN_CODE 					: End Property
+	Public Property Get PluginName() 		: PluginName = PLUGIN_NAME 					: End Property
+	Public Property Get PluginVersion() 	: PluginVersion = PLUGIN_VERSION 			: End Property
+	Public Property Get PluginGit() 		: PluginGit = PLUGIN_GIT 					: End Property
+	Public Property Get PluginDevURL() 		: PluginDevURL = PLUGIN_DEV_URL 			: End Property
+	Public Property Get PluginFolder() 		: PluginFolder = PLUGIN_FILES_ROOT 			: End Property
+	Public Property Get PluginIcon() 		: PluginIcon = PLUGIN_ICON 					: End Property
+	Public Property Get PluginRemovable() 	: PluginRemovable = PLUGIN_REMOVABLE 		: End Property
+	Public Property Get PluginCredits() 	: PluginCredits = PLUGIN_CREDITS 			: End Property
+	Public Property Get PluginRoot() 		: PluginRoot = PLUGIN_ROOT 					: End Property
+	Public Property Get PluginFolderName() 	: PluginFolderName = PLUGIN_FOLDER_NAME 	: End Property
+	Public Property Get PluginDBTable() 	: PluginDBTable = IIf(Len(PLUGIN_DB_NAME)>2, "tbl_plugin_"&PLUGIN_DB_NAME, "") 	: End Property
+
+	Private Property Get This()
+		This = Array(PluginCode, PluginName, PluginVersion, PluginGit, PluginDevURL, PluginFolder, PluginIcon, PluginRemovable, PluginCredits, PluginRoot, PluginFolderName, PluginDBTable )
+	End Property
+	'---------------------------------------------------------------
+	' Plugin Defines
 	'---------------------------------------------------------------
 
 
